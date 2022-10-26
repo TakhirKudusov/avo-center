@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: token-site
+  namespace: __NAMESPACE__
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: token-site
+  template:
+    metadata:
+      namespace: __NAMESPACE__
+      labels:
+        app: token-site
+    spec:
+      containers:
+        - name: token-site
+          image: cr.yandex/__CONTAINER_REGISTRY_ID__/token-site:__VERSION__
+          imagePullPolicy: Always
+          env:
+            - name: NODE_ENV
+              value: __ENV_MODE__
+          ports:
+            - containerPort: 3001

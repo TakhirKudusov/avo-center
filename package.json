@@ -1,0 +1,21 @@
+{
+    "name": "avo-token-site",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "imagemin": "node imagemin.js"
+    },
+    "type": "module",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap-icons": "^1.9.1",
+        "compression": "^1.7.4",
+        "express": "^4.18.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.16"
+    }
+}
