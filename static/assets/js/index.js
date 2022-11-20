@@ -1,11 +1,16 @@
 const buyTokenButton =  document.querySelector("#buy-avo-button")
 const buyTokenModal = document.querySelector("#buy-avo-token_modal-container")
 const closeButton = document.querySelector("#close-modal-button")
+const planetsList = document.getElementsByClassName("clickable-planet")
 
 const handleBuyTokenButtonClick = (e) => {
     if ([...buyTokenModal.classList].includes("closed")) {
         buyTokenModal.classList.remove("closed")
     }
+}
+
+for (let i = 0; i < planetsList.length; i++) {
+    planetsList[i].addEventListener("click", handleBuyTokenButtonClick)
 }
 
 const handleCloseModal = (e) => {
